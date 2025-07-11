@@ -1,0 +1,32 @@
+# RMana154
+Module 3
+public class Bottle
+{
+    public string Name;
+    public decimal Volume;
+    public int Year;
+
+    // Constructor with one parameter
+    public Bottle(string name)
+    {
+        Name = name;
+        Volume = 0.75m; // default volume in liters
+    }
+
+    // Overloaded constructor with two parameters
+    public Bottle(string name, decimal volume) : this(name)
+    {
+        Volume = volume;
+    }
+
+    // Overloaded constructor with three parameters
+    public Bottle(string name, decimal volume, int year) : this(name, volume)
+    {
+        Year = year;
+    }
+}
+
+// Example usage:
+var bottle1 = new Bottle("Chardonnay");
+var bottle2 = new Bottle("Merlot", 1.5m);
+var bottle3 = new Bottle("Cabernet", 0.75m, 2018);
